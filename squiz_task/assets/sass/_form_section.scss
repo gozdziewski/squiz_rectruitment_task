@@ -1,0 +1,232 @@
+.form_section{
+  font-size: 18px;
+  .container {
+    padding: 0 140px;
+    .first_area {
+      h2 {
+        font-size: 32px;
+        color: #a80c1e;
+        padding: 40px 0 10px 0;
+      }
+      p{
+        .value_red{
+          color: #a80c1e;
+        }
+      }
+      .range_slider{
+        flex-grow: 1;
+        margin: 45px 0 28px 0;
+        .rangeslider{
+          position: relative;
+          display: block;
+          box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        .rangeslider--horizontal{
+          width: 100%;
+          height: 38px;
+          border: 1px solid #ddd;
+          border-radius: 25px;
+          background: #f9f9f9;
+          .rangeslider__fill{
+            border-radius: 25px;
+            display: block;
+            top: 0;
+            height: 100%;
+            position: absolute;
+            background-color: #feebc5;
+            background: -moz-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F82B39), color-stop(50%, #F82B39), color-stop(51%, #AE0D15), color-stop(100%, #AE0D15));
+            background: -webkit-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+            background: -o-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+            background: -ms-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+            background: linear-gradient(0deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+            background-size: 50% 100%;
+          }
+          .rangeslider__handle{
+            touch-action: pan-y;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            min-width: 45px;
+            line-height: 42px;
+            text-align: center;
+            background: #eee;
+            color: #a80c1e;
+            margin-left: -5px;
+            top:-30px;
+            width: 45px;
+            height: 55px;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            &:before {
+              border-top: 15px solid #eee;
+              border-left: 22px solid transparent;
+              border-right: 22px solid transparent;
+              content: "";
+              height: 0;
+              left: 0;
+              position: absolute;
+              border-radius: 26px;
+              top: 49px;
+              width: 0;
+            }
+          }
+        }
+      }
+      .checkbox{
+        padding-bottom: 37px;
+        span{
+          padding-left: 10px;
+        }
+      }
+    }
+    .second_area{
+      display: none;
+      border-top: 1px solid #ddd;
+      p{
+        display: block;
+        span{
+          margin: 15px 5px 0 0;
+          padding: 5px;
+          border: 1px solid #000;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          width: 28px;
+          height: 28px;
+          text-align: center;
+          display: inline-block;
+        }
+      }
+      div{
+        &:first-child{
+          padding-right: 23px;
+        }
+      }
+      .form_left{
+        padding-right: 8px !important;
+      }
+      .form_right{
+        padding-left: 8px !important;
+      }
+      .form_element{
+        float:left;
+        padding: 28px 0;
+        input{
+          margin-top: 10px;
+          width: 100%;
+          height: 50px;
+          padding: 15px;
+          border: 1px solid #bbb;
+          border-radius: 10px;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 18px;
+        }
+        #address-error, #email-error, #city-error{
+          font-size: 14px;
+          padding-top: 5px;
+          color: #ae0d15;
+          opacity: 0;
+        }
+      }
+    }
+    .third_area{
+      display: none;
+      border-top: 1px solid #ddd;
+      width: 100%;
+      p{
+        display: block;
+        span{
+          margin: 15px 5px 0 0;
+          padding: 5px;
+          border: 1px solid #000;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+          width: 28px;
+          height: 28px;
+          text-align: center;
+          display: inline-block;
+        }
+      }
+        input{
+          margin-top: 15px;
+          width: 100%;
+          height: 50px;
+          padding: 15px 15px 15px 55px;
+          border: 1px solid #bbb;
+          border-radius: 10px;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 18px;
+          background-image: url('../images/credit_cart.png');
+          background-position: 15px 15px;
+          background-repeat: no-repeat;
+        }
+      #credit-error{
+          font-size: 14px;
+          padding-top: 5px;
+      }
+    }
+  }
+  .btn_donate{
+    padding: 37px 0 57px 0;
+    cursor: pointer;
+    display: inline-block;
+    a{
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      border-radius: 10px;
+      background: #ae0d15;
+      box-shadow: 0px 3px 0px 0px #f82b38;
+      padding: 19px 26px;
+      border: 1px solid #ae0d15;
+
+      &:hover{
+        color: #ae0d15;
+        background: #fff;
+      }
+    }
+  }
+}
+
+.error-massage{
+  border: 1px solid #ae0d15 !important;
+}
+
+@media (max-width: 1024px){
+  .form_section {
+    font-size: 18px;
+    .container {
+      padding: 0 30px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .form_section{
+    .container{
+      .second_area {
+        display: none;
+        border-top: 1px solid #ddd;
+        .form_left {
+          padding-right: 0px !important;
+        }
+        .form_right {
+          padding-left: 0px !important;
+        }
+        .form_element{
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+  .btn_donate{
+    display: table !important;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 30px 0;
+  }
+}

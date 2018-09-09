@@ -1,0 +1,22 @@
+*{box-sizing: border-box;}
+.container{
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+$max: 12;
+@for $i from 1 through $max {
+  $equ: 100% * ($i/ $max);
+  .col-#{ $i } {
+    width: $equ;
+  }
+}
+@media (max-width: 767px){
+  $max: 12;
+  @for $i from 1 through $max {
+    $equ: 100% * ($i/ $max);
+    .col-sm-#{ $i } {
+      width: $equ;
+    }
+  }
+}
