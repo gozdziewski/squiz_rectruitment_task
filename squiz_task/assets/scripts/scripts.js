@@ -32,20 +32,15 @@ function rangeMessage(thisVal) {
     }
 }
 
-var button = document.querySelector(".btn_donate");
-button.onclick = function() {
+$('.btn_donate').click(function() {
     var second_area = document.querySelector(".second_area");
     var display = second_area.style.display;
     var check = document.querySelector(".check");
-    if( check.checked === true){
-        if (display === 'none') {
-            second_area.style.display = 'block';
-        } else {
-            second_area.style.display = 'none';
-        }
-        return false;
+    if(check.checked === true) {
+        second_area.style.display = 'block';
     }
-};
+    return false;
+});
 
 var email = document.getElementById('email');
 var emailError = document.getElementById('email-error');
