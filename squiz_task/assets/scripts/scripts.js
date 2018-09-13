@@ -1,3 +1,7 @@
+$('.btn_search').click(function() {
+    $('.search_input').toggleClass('active');
+});
+
 var currentValue = 100;
 var $currentSlider = $('#rangeSliderCurrent');
 $currentSlider.rangeslider({
@@ -21,26 +25,24 @@ slider.onchange = function() {
 
 function rangeMessage(thisVal) {
     var htmlValue = '<span class="value_red">$' + thisVal + '</span>';
-    if (thisVal <= 20) {
-        return htmlValue + ' will let us to add a few new modules';
-    } else if (thisVal <= 50) {
-        return htmlValue + ' can help us improve this product';
-    } else if (thisVal <= 80) {
-        return htmlValue + ' can help us expand this product to other platforms';
-    } else {
-        return htmlValue + ' goes a long way. If you\'d like to consider becoming a sponsor, please contact us';
-    }
-}
-
-$('.btn_donate').click(function() {
     var second_area = document.querySelector(".second_area");
     var display = second_area.style.display;
-    var check = document.querySelector(".check");
-    if(check.checked === true) {
+    if(thisVal > 0){
         second_area.style.display = 'block';
+        if (thisVal <= 20) {
+            return htmlValue + ' will let us to add a few new modules';
+        } else if (thisVal <= 50) {
+            return htmlValue + ' can help us improve this product';
+        } else if (thisVal <= 80) {
+            return htmlValue + ' can help us expand this product to other platforms';
+        } else {
+            return htmlValue + ' goes a long way. If you\'d like to consider becoming a sponsor, please contact us';
+        }
+    } else{
+        second_area.style.display = 'none';
+        return htmlValue + ' will let us to add a few new modules';
     }
-    return false;
-});
+}
 
 var email = document.getElementById('email');
 var emailError = document.getElementById('email-error');
@@ -89,9 +91,18 @@ function checkResult() {
     }
 }
 
+// function isEmailValid(email) {
+//     var reg = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+//     if (!reg.test(email))
+//         return false;
+//     else
+//         return true;
+//
+// }
+
 function isEmailValid(email) {
     var indexOfAt = email.indexOf('@');
-    var indexOfDot = email.indexOf('.', indexOfAt);
+    var indexOfDot = email.indexOf('!', indexOfAt);
     return indexOfDot > indexOfAt;
 };
 

@@ -5,7 +5,7 @@ footer{
   }
   .footer_top{
     background: linear-gradient(to top, #fff 0%, #EDEDED 100%);
-    box-shadow: inset 0px 4px 2px 0px rgba(204,204,204,1);
+    box-shadow: inset 0px 2px 0px 0px #ccc;
     height: 89px;
     width: 100%;
   }
@@ -23,7 +23,7 @@ footer{
             width: 30px;
             text-align: center;
             text-decoration: none;
-            margin: 2px 8px;
+            margin-left: 7px;
             border-radius: 50%;
             display: inline-block;
             position: relative;
@@ -57,8 +57,8 @@ footer{
   footer{
     .social_icon{
       text-align: center;
-      float: none !important;
-      padding-right: 0px !important;
+      float: none;
+      padding-right: 0px;
     }
   }
 }
