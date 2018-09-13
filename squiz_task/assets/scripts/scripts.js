@@ -26,6 +26,7 @@ slider.onchange = function() {
 function rangeMessage(thisVal) {
     var htmlValue = '<span class="value_red">$' + thisVal + '</span>';
     var second_area = document.querySelector(".second_area");
+    var thirdSection = document.querySelector(".third_area");
     var display = second_area.style.display;
     if(thisVal > 0){
         second_area.style.display = 'block';
@@ -40,6 +41,7 @@ function rangeMessage(thisVal) {
         }
     } else{
         second_area.style.display = 'none';
+        thirdSection.style.display = 'none';
         return htmlValue + ' will let us to add a few new modules';
     }
 }

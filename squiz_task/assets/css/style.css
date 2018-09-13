@@ -195,10 +195,15 @@ header nav {
       margin-left: 0; }
 
 @media only screen and (max-width: 1024px) {
+  header nav .btn_cart {
+    margin: 25px 60px 0 0;
+    padding: 2px 10px;
+    border-left: none;
+    border-right: 2px solid; }
   header nav #menuToggle {
     position: absolute;
     top: 65px;
-    right: 5px;
+    right: 25px;
     z-index: 1;
     user-select: none; }
     header nav #menuToggle input {
@@ -240,7 +245,7 @@ header nav {
         transform-origin: 0% 0%; }
       header nav #menuToggle span:nth-last-child(2) {
         transform-origin: 0% 100%; }
-  header nav .menu, header nav .btn_cart {
+  header nav .menu {
     position: fixed;
     width: 100%;
     margin: -100px 0 0 0;
@@ -254,23 +259,16 @@ header nav {
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
-    header nav .menu li, header nav .btn_cart li {
+    header nav .menu li {
       text-align: center;
       padding: 15px 0;
       font-size: 24px;
       display: block;
       font-weight: 600;
-      border-bottom: 1px solid #000; }
-    header nav .menu span, header nav .btn_cart span {
-      padding: 0;
-      background: 0;
-      border: none;
-      margin: 0 auto;
-      text-align: center; }
-    header nav .menu i, header nav .btn_cart i {
-      padding: 20px 0 0 0px;
-      font-size: 40px;
-      margin-left: 30px; } }
+      border-bottom: 1px solid #000; } }
+@media only screen and (max-width: 999px) {
+  header nav #menuToggle {
+    right: 5px; } }
 @media only screen and (max-width: 400px) {
   header .search .searchbox .search_input.active {
     width: 120px; } }
