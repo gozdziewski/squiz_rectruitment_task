@@ -17,12 +17,12 @@
                 <form class="searchbox">
                     <input class="search_input" type="search" placeholder="Search">
                     <input class="btn_search_input" type="submit" value="">
-                    <a class="btn_search" href="#!"><i class="fa fa-search"></i></a>
+                    <a class="btn_search" href="#!" type="submit" aria-label="Search"><i class="fa fa-search"></i></a>
                 </form>
             </div>
             <nav>
                 <a href="#!"><img src="assets/images/logo.png" alt="logo"></a>
-                <div class="btn_cart"><img src="assets/images/shop_cart.png"></div>
+                <div class="btn_cart"><img src="assets/images/shop_cart.png" alt="Shop Cart"></div>
                <div id="menuToggle">
                    <input type="checkbox" />
                    <span></span>
@@ -42,63 +42,66 @@
     </header>
     <section class="form_section">
         <div class="container">
-            <div class="first_area">
-                <h2>Donate our cause</h2>
-                <p id="range"> <span class="value_red">$0</span> will let us to add a few new modules</p>
-                <div class="range_slider">
-                    <input type="range" id="rangeSliderCurrent" min="0" max="100" value="0">
+            <form action="">
+                <div class="first_area">
+                    <h2>Donate our cause</h2>
+                    <p id="range"> <span class="value_red">$0</span> will let us to add a few new modules</p>
+                    <div class="range_slider">
+                        <input type="range" id="rangeSliderCurrent" min="0" max="100" value="0">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" class="check">
+                            <span>Yes, I would like to donate this amount monthly</span>
+                        </label>
+                    </div>
                 </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" class="check">
-                        <span>Yes, I would like to donate this amount monthly</span>
-                    </label>
+                <div class="second_area">
+                    <p><span>2</span> Enter your information:</p>
+                    <div class="col-6 col-sm-12 form_element form_left">
+                        <label for="namef"> Name</label>
+                        <input type="text" name="namef" id="namef" placeholder="First Last">
+                        <div id="name-error">Please enter a first and last name</div>
+                    </div>
+                    <div class="col-6 col-sm-12 form_element form_right">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="your@email.com">
+                        <div id="email-error">Please enter a valid email-address</div>
+                    </div>
+                    <div class="col-6 col-sm-12 form_element form_left">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="123 Main St, Apt 2">
+                        <div id="address-error">Please enter your street address</div>
+                    </div>
+                    <div class="col-6 col-sm-12 form_element form_right">
+                        <label for="city">City, State</label>
+                        <input type="text" id="city" name="city" placeholder="Pittsburgh, PA">
+                        <div id="city-error">Please enter your city and state, separated by a comma</div>
+                    </div>
                 </div>
-            </div>
-            <div class="second_area">
-                <p><span>2</span> Enter your information:</p>
-                <div class="col-6 col-sm-12 form_element form_left">
-                    <label for="name"> Name</label>
-                    <input type="text" name="name" id="name" placeholder="First Last">
+                <div class="third_area">
+                    <p><span>3</span> Credit card info:</p>
+                    <div class="col-12 form_element">
+                        <input type="text" id="credit" name="credit" class="credit-card" placeholder="1234 5678 9012 3456" />
+                        <div id="credit-error"> Please enter your credit card number</div>
+                    </div>
                 </div>
-                <div class="col-6 col-sm-12 form_element form_right">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="your@email.com">
-                    <div id="email-error">Please enter a valid email-address</div>
+                <div class="btn_donate">
+                    <a href=""#! type="submit" aria-label="Search">Donate</a>
                 </div>
-                <div class="col-6 col-sm-12 form_element form_left">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="123 Main St, Apt 2">
-                    <div id="address-error">Please enter your street address</div>
-                </div>
-                <div class="col-6 col-sm-12 form_element form_right">
-                    <label for="city">City, State</label>
-                    <input type="text" id="city" name="city" placeholder="Pittsburgh, PA">
-                    <div id="city-error">Please enter your city and state, separated by a comma</div>
-                </div>
-            </div>
-            <div class="third_area">
-                <p><span>3</span> Credit card info:</p>
-                <div class="col-12 form_element">
-                    <input type="text" id="credit" name="credit" class="credit-card" placeholder="XXXX XXXX XXXX XXXX" />
-                    <div id="credit-error"> Please enter your credit card number</div>
-                </div>
-            </div>
-            <div class="btn_donate">
-                <a href=""#!>Donate</a>
-            </div>
+            </form>
         </div>
     </section>
     <footer>
         <div class="container">
             <div class="col-12 footer_top">
                 <ul class="social_icon">
-                    <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#!"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#!"><i class="fa fa-flickr"></i></a></li>
-                    <li><a href="#!"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="#!"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#!" aria-label="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#!" aria-label="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#!" aria-label="youtube"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#!" aria-label="flickr"><i class="fa fa-flickr"></i></a></li>
+                    <li><a href="#!" aria-label="Message"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="#!" aria-label="RSS"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div>
         </div>
