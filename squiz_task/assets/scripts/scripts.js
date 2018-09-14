@@ -46,67 +46,88 @@ function rangeMessage(thisVal) {
     }
 }
 
-var email = document.getElementById('email');
-var emailError = document.getElementById('email-error');
-email.oninput = checkResult;
-
-var address = document.getElementById('address');
-var addressError = document.getElementById('address-error');
-address.oninput = checkResult;
-
-var city = document.getElementById('city');
-var cityError = document.getElementById('city-error');
-city.oninput = checkResult;
-
-var thirdSection = document.querySelector(".third_area");
-
-function checkResult() {
-    var allCorrect = true;
-    if (!isEmailValid(email.value)) {
-        email.classList.add('error-massage');
-        emailError.style.opacity = 1;
-        allCorrect = false;
-    } else {
-        email.classList.remove('error-massage');
-        emailError.style.opacity = 0;
+function ValidationName(){
+    var name = document.getElementById('namef');
+    var nameError = document.getElementById('name-error');
+    var pattern = /^[\D]{3,}\s+[\D]{3,}$/;
+    const is_name = pattern.test(name.value);
+    if(!is_name){
+        name.classList.add('error-massage');
+        nameError.style.opacity = 1;
+        return false;
     }
-    if (address.value.indexOf(',') == -1) {
-        address.classList.add('error-massage');
-        addressError.style.opacity = 1;
-        allCorrect = false;
-    } else {
-        address.classList.remove('error-massage');
-        addressError.style.opacity = 0;
-    }
-    if (city.value.indexOf(',') == -1) {
-        city.classList.add('error-massage');
-        cityError.style.opacity = 1;
-        allCorrect = false;
-    } else {
-        city.classList.remove('error-massage');
-        cityError.style.opacity = 0;
-    }
-    if (allCorrect) {
-        thirdSection.style.display = 'inline-block';
-    } else {
-        thirdSection.style.opacity = 'none';
+    else{
+        name.classList.remove('error-massage');
+        nameError.style.opacity = 0;
+        return true;
     }
 }
 
-// function isEmailValid(email) {
-//     var reg = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
-//     if (!reg.test(email))
-//         return false;
-//     else
-//         return true;
-//
-// }
+function ValidationEmail(){
+    var email = document.getElementById('email');
+    var emailError = document.getElementById('email-error');
+    var pattern2 = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    const is_email = pattern2.test(email.value);
+    if(!is_email){
+        email.classList.add('error-massage');
+        emailError.style.opacity = 1;
+        return false;
+    }
+    else{
+        email.classList.remove('error-massage');
+        emailError.style.opacity = 0;
+        return true;
+    }
+}
 
-function isEmailValid(email) {
-    var indexOfAt = email.indexOf('@');
-    var indexOfDot = email.indexOf('!', indexOfAt);
-    return indexOfDot > indexOfAt;
-};
+function ValidationAddress() {
+    var address = document.getElementById('address');
+    var addressError = document.getElementById('address-error');
+    var pattern = /^[\D]{3,}\s+[\d]{0,8}$/;
+    var is_address = pattern.test(address.value);
+    if(!is_address){
+        address.classList.add('error-massage');
+        addressError.style.opacity = 1;
+        return false;
+    }
+    else{
+        console.log(is_address);
+        address.classList.remove('error-massage');
+        addressError.style.opacity = 0;
+        return true;
+    };
+}
+
+function ValidationCity() {
+    var city = document.getElementById('city');
+    var cityError = document.getElementById('city-error');
+    var pattern = /^[\D]{3,}\,\s+[\D]{0,8}$/;
+    var is_city = pattern.test(city.value);
+    if(!is_city){
+        city.classList.add('error-massage');
+        cityError.style.opacity = 1;
+        return false;
+    }
+    else{
+        city.classList.remove('error-massage');
+        cityError.style.opacity = 0;
+        return true;
+    }
+}
+
+var name = document.getElementById('namef');
+name.oninput = checkResult;
+
+var email = document.getElementById('email');
+email.oninput = checkResult;
+
+var address = document.getElementById('address');
+address.oninput = checkResult;
+
+var city = document.getElementById('city');
+city.oninput = checkResult;
+
+var thirdSection = document.querySelector(".third_area");
 
 String.prototype.toCardFormat = function () {
     return this.replace(/[^0-9]/g, "").substr(0, 16).split("").reduce(cardFormat, "");
@@ -120,3 +141,98 @@ $(document).ready(function(){
         $(this).val($(this).val().toCardFormat());
     });
 });
+
+$('#namef').on('blur', function() {
+    var name = document.getElementById('namef');
+    var nameError = document.getElementById('name-error');
+    var input = $(this);
+    var pattern = /^[\D]{3,}\s+[\D]{3,}$/;
+     is_name = pattern.test(input.val());
+    if(is_name){
+        name.classList.remove('error-massage');
+        nameError.style.opacity = 0;
+        return true;
+    }
+    else{
+        name.classList.add('error-massage');
+        nameError.style.opacity = 1;
+    }
+});
+
+$('#email').on('blur', function() {
+    var email = document.getElementById('email');
+    var emailError = document.getElementById('email-error');
+    var input = $(this);
+    var pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    var is_email = pattern.test(input.val());
+    if(is_email){
+        email.classList.remove('error-massage');
+        emailError.style.opacity = 0;
+    }
+    else{
+        email.classList.add('error-massage');
+        emailError.style.opacity = 1;
+    }
+});
+
+$('#address').on('blur', function() {
+    var address = document.getElementById('address');
+    var addressError = document.getElementById('address-error');
+    var input = $(this);
+    var pattern = /^[\D]{3,}\s+[\d]{0,8}$/;
+    var is_address = pattern.test(input.val());
+    if(is_address){
+        address.classList.remove('error-massage');
+        addressError.style.opacity = 0;
+    }
+    else{
+        address.classList.add('error-massage');
+        addressError.style.opacity = 1;
+    }
+});
+
+$('#city').on('blur', function() {
+    var city = document.getElementById('city');
+    var cityError = document.getElementById('city-error');
+    var input = $(this);
+    var pattern = /^[\D]{3,}\,\s+[\D]{0,8}$/;
+    var is_city = pattern.test(input.val());
+    if(is_city){
+        city.classList.remove('error-massage');
+        cityError.style.opacity = 0;
+    }
+    else{
+        city.classList.add('error-massage');
+        cityError.style.opacity = 1;
+    }
+});
+
+$('.form_section').on('blur', function() {
+    var city = document.getElementById('city');
+    var cityError = document.getElementById('city-error');
+    var input = $(this);
+    var pattern = /^[\D]{3,}\,\s+[\D]{0,8}$/;
+    var is_city = pattern.test(input.val());
+    if(is_city){
+        city.classList.remove('error-massage');
+        cityError.style.opacity = 0;
+    }
+    else{
+        city.classList.add('error-massage');
+        cityError.style.opacity = 1;
+    }
+});
+
+function checkResult() {
+    var allCorrect = true;
+    console.log("Wartosc wpisana");
+    if(($('#namef').val() &&$('#email').val() &&$('#address').val() && $('#city').val())){
+        if(ValidationEmail() && ValidationName() &&ValidationAddress() && ValidationCity()){
+            thirdSection.style.display = 'inline-block';
+        }
+    } else{
+        thirdSection.style.opacity = 'none';
+    }
+}
+
+

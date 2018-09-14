@@ -1,10 +1,10 @@
 .form_section{
-  font-size: 18px;
+  font-size: 1.125rem;
   .container {
     padding: 0 140px;
     .first_area {
       h2 {
-        font-size: 32px;
+        font-size: 2rem;
         color: #a80c1e;
         padding: 40px 0 10px 0;
       }
@@ -90,7 +90,7 @@
           padding: 5px;
           border: 1px solid #000;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: bold;
           width: 28px;
           height: 28px;
@@ -120,10 +120,10 @@
           border: 1px solid #bbb;
           border-radius: 10px;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
         }
-        #address-error, #email-error, #city-error{
-          font-size: 14px;
+        #address-error, #email-error, #city-error, #name-error{
+          font-size: 0.875rem;
           padding-top: 5px;
           color: #ae0d15;
           opacity: 0;
@@ -141,7 +141,7 @@
           padding: 5px;
           border: 1px solid #000;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: bold;
           width: 28px;
           height: 28px;
@@ -157,13 +157,13 @@
           border: 1px solid #bbb;
           border-radius: 10px;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
           background-image: url('../images/credit_cart.png');
           background-position: 15px 15px;
           background-repeat: no-repeat;
         }
       #credit-error{
-          font-size: 14px;
+          font-size: 0.875rem;
           padding-top: 5px;
       }
     }
@@ -175,7 +175,7 @@
     a{
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 600;
       color: #fff;
       border-radius: 10px;
@@ -198,7 +198,7 @@
 
 @media (max-width: 1024px){
   .form_section {
-    font-size: 18px;
+    font-size: 1.125rem;
     .container {
       padding: 0 30px;
     }

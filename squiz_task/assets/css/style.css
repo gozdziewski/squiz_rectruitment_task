@@ -128,7 +128,7 @@ header .search {
       border: none;
       height: 30px;
       color: #fff;
-      font-size: 15px;
+      font-size: 0.9375rem;
       visibility: hidden;
       width: 0;
       transition: width 0.4s; }
@@ -153,7 +153,7 @@ header .search {
     background: #a80c1e; }
     header .search a i {
       color: #fff;
-      font-size: 22px;
+      font-size: 1.375rem;
       padding: 8px 17px; }
 header nav {
   background: #e8e8e8;
@@ -169,7 +169,7 @@ header nav {
       padding: 40px 28px 18px 28px; }
       header nav ul li a {
         text-decoration: none;
-        font-size: 16px;
+        font-size: 1rem;
         color: #231f20; }
         header nav ul li a:hover {
           color: #a80c1e;
@@ -262,7 +262,7 @@ header nav {
     header nav .menu li {
       text-align: center;
       padding: 15px 0;
-      font-size: 24px;
+      font-size: 1.5rem;
       display: block;
       font-weight: 600;
       border-bottom: 1px solid #000; } }
@@ -273,11 +273,11 @@ header nav {
   header .search .searchbox .search_input.active {
     width: 120px; } }
 .form_section {
-  font-size: 18px; }
+  font-size: 1.125rem; }
   .form_section .container {
     padding: 0 140px; }
     .form_section .container .first_area h2 {
-      font-size: 32px;
+      font-size: 2rem;
       color: #a80c1e;
       padding: 40px 0 10px 0; }
     .form_section .container .first_area p .value_red {
@@ -350,7 +350,7 @@ header nav {
           padding: 5px;
           border: 1px solid #000;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: bold;
           width: 28px;
           height: 28px;
@@ -373,9 +373,9 @@ header nav {
           border: 1px solid #bbb;
           border-radius: 10px;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px; }
-        .form_section .container .second_area .form_element #address-error, .form_section .container .second_area .form_element #email-error, .form_section .container .second_area .form_element #city-error {
-          font-size: 14px;
+          font-size: 1.125rem; }
+        .form_section .container .second_area .form_element #address-error, .form_section .container .second_area .form_element #email-error, .form_section .container .second_area .form_element #city-error, .form_section .container .second_area .form_element #name-error {
+          font-size: 0.875rem;
           padding-top: 5px;
           color: #ae0d15;
           opacity: 0; }
@@ -390,7 +390,7 @@ header nav {
           padding: 5px;
           border: 1px solid #000;
           font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: bold;
           width: 28px;
           height: 28px;
@@ -404,12 +404,12 @@ header nav {
         border: 1px solid #bbb;
         border-radius: 10px;
         font-family: 'Source Sans Pro', sans-serif;
-        font-size: 18px;
+        font-size: 1.125rem;
         background-image: url("../images/credit_cart.png");
         background-position: 15px 15px;
         background-repeat: no-repeat; }
       .form_section .container .third_area #credit-error {
-        font-size: 14px;
+        font-size: 0.875rem;
         padding-top: 5px; }
   .form_section .btn_donate {
     padding: 37px 0 57px 0;
@@ -418,7 +418,7 @@ header nav {
     .form_section .btn_donate a {
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 600;
       color: #fff;
       border-radius: 10px;
@@ -435,7 +435,7 @@ header nav {
 
 @media (max-width: 1024px) {
   .form_section {
-    font-size: 18px; }
+    font-size: 1.125rem; }
     .form_section .container {
       padding: 0 30px; } }
 @media (max-width: 767px) {
@@ -471,11 +471,11 @@ footer .social_icon {
     display: inline-block; }
     footer .social_icon li a i {
       padding: 5px;
-      font-size: 18px;
+      font-size: 1.125rem;
       width: 30px;
       text-align: center;
       text-decoration: none;
-      margin-left: 7px;
+      margin-left: 4px;
       border-radius: 50%;
       display: inline-block;
       position: relative;
